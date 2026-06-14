@@ -67,17 +67,25 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-10 text-lg text-stone-700 leading-relaxed">
             <p>
-              Hadsel Bygg og Vedlikehold er en lokal entreprenør basert på Stokmarknes.
-              Vi leverer komplette løsninger innen bygg, rehabilitering og vedlikehold —
-              for både private og næringskunder.
+              Hadsel Bygg og Vedlikehold er en lokal entreprenør basert på Stokmarknes
+              med rundt 30 ansatte. Vi leverer komplette løsninger innen bygg,
+              rehabilitering og vedlikehold — for både private og næringskunder.
             </p>
             <p>
-              Fra nybygg og tilbygg til betongarbeid, fliser, maling og fasade. Vårt
-              arbeidsområde er naturlig Nord-Nordland og Sør-Troms, men prosjekter
-              kommer over et større geografisk område når det passer.
+              Tømrerarbeid, betong, betongsaging og kjerneboring, flislegging og maling.
+              Vårt arbeidsområde er naturlig Nord-Nordland og Sør-Troms. Vi er
+              Miljøfyrtårn-sertifisert og godkjent lærlingbedrift.
             </p>
           </div>
-          <div className="grid sm:grid-cols-3 gap-6 mt-14">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+            <div className="border-l-2 border-amber-400 pl-5">
+              <p className="text-3xl font-bold text-stone-900">~30 ansatte</p>
+              <p className="text-sm text-stone-600 mt-1">Bredt fagmiljø under samme tak</p>
+            </div>
+            <div className="border-l-2 border-amber-400 pl-5">
+              <p className="text-3xl font-bold text-stone-900">Miljøfyrtårn</p>
+              <p className="text-sm text-stone-600 mt-1">Sertifisert for bærekraftig drift</p>
+            </div>
             <div className="border-l-2 border-amber-400 pl-5">
               <p className="text-3xl font-bold text-stone-900">Lærling­bedrift</p>
               <p className="text-sm text-stone-600 mt-1">Godkjent læreplass for fagbrev</p>
@@ -85,10 +93,6 @@ export default function Home() {
             <div className="border-l-2 border-amber-400 pl-5">
               <p className="text-3xl font-bold text-stone-900">EHF-faktura</p>
               <p className="text-sm text-stone-600 mt-1">Standard for næringskunder</p>
-            </div>
-            <div className="border-l-2 border-amber-400 pl-5">
-              <p className="text-3xl font-bold text-stone-900">4 ansatte</p>
-              <p className="text-sm text-stone-600 mt-1">Hver med spisskompetanse</p>
             </div>
           </div>
         </div>
@@ -133,11 +137,11 @@ export default function Home() {
       <section id="team" className="py-28 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Teamet —</p>
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Kontaktpersoner —</p>
             <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-              Folkene bak.
+              Snakk direkte med riktig person.
             </h2>
-            <p className="text-lg text-stone-600 mt-4">Du snakker direkte med oss — ingen mellomledd.</p>
+            <p className="text-lg text-stone-600 mt-4">Vi er rundt 30 ansatte — her er folka du tar kontakt med.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -174,12 +178,12 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
             {[
-              { src: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80", alt: "Byggeprosjekt fra Hadsel Bygg" },
-              { src: "https://images.unsplash.com/photo-1574359411659-15573a27bfcb?auto=format&fit=crop&w=900&q=80", alt: "Interiørrehabilitering" },
-              { src: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=80", alt: "Bygg i Vesterålen" },
-              { src: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80", alt: "Snekkerarbeid på byggeplass" },
-              { src: "https://images.unsplash.com/photo-1416331108676-a22ccb276e35?auto=format&fit=crop&w=900&q=80", alt: "Fasadearbeid" },
-              { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80", alt: "Håndverker i arbeid" },
+              { src: "https://hbv.as/resources/05828d5d976f0bcc209a938295a9db.jpg", alt: "Prosjekt fra Hadsel Bygg og Vedlikehold" },
+              { src: "https://hbv.as/resources/0ebea12ae251be1ba8a428bc57ed56.jpg", alt: "Bygg- og rehabiliteringsprosjekt" },
+              { src: "https://hbv.as/resources/ae147eaa46154b2c1ab5341b0e4ac3.jpg", alt: "Snekker- og betongarbeid" },
+              { src: "https://hbv.as/resources/500806b1b3268856836532ae6313f4.jpg", alt: "Prosjekt i Vesterålen" },
+              { src: "https://hbv.as/resources/7d307130ee78cce7714d78d141b6d5.jpg", alt: "Fasadearbeid og tak" },
+              { src: "https://hbv.as/resources/66f4adf7b61bc27d6b1f641016f46e.jpg", alt: "Levert prosjekt fra HBV" },
             ].map((img, i) => (
               <div key={i} className="aspect-[4/3] overflow-hidden bg-stone-200 group">
                 <img
