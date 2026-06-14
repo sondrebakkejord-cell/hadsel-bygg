@@ -123,10 +123,10 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { title: "Alt innen betong", desc: "Plate på mark, vegger og spesialarbeid i betong.", img: "https://hbv.as/resources/05828d5d976f0bcc209a938295a9db.jpg" },
-              { title: "Tømrerarbeid", desc: "Klassisk snekring — fra konstruksjon til innvendig listverk.", img: "https://hbv.as/resources/0ebea12ae251be1ba8a428bc57ed56.jpg" },
-              { title: "Betongsaging & kjerneboring", desc: "Presisjonsarbeid i eksisterende konstruksjoner.", img: "https://hbv.as/resources/500806b1b3268856836532ae6313f4.jpg" },
-              { title: "Flislegging", desc: "Bad, gulv og vegg — i moderne og klassisk design.", img: "https://hbv.as/resources/66f4adf7b61bc27d6b1f641016f46e.jpg" },
+              { title: "Alt innen betong", desc: "Plate på mark, vegger og spesialarbeid i betong.", img: "https://hbv.as/resources/acc7fe47b7c5a21d7c244415325eb9.jpg" },
+              { title: "Tømrerarbeid", desc: "Klassisk snekring — fra konstruksjon til innvendig listverk.", img: "https://hbv.as/resources/5ee3b8905a1f8e0ebb140b0a06b2f5.jpg" },
+              { title: "Betongsaging & kjerneboring", desc: "Presisjonsarbeid i eksisterende konstruksjoner.", img: "https://hbv.as/resources/dd84bace99512112d4803412d3dd48.jpg" },
+              { title: "Flislegging", desc: "Bad, gulv og vegg — i moderne og klassisk design.", img: "https://hbv.as/resources/870452e883f11c378317e951148b4a.jpg" },
             ].map((s) => (
               <article key={s.title} className="group relative overflow-hidden rounded-lg bg-stone-800 aspect-[4/3]">
                 <img
