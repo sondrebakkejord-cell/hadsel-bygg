@@ -15,7 +15,7 @@ export default function Home() {
             <a href="#team" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Team</a>
             <a href="#godkjenninger" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Sertifiseringer</a>
             <a href="#kontakt" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Kontakt</a>
-            <a href="tel:+4791670535" className="px-5 py-2.5 bg-amber-400 text-stone-900 hover:bg-amber-300 transition-colors uppercase tracking-widest text-xs font-bold">
+            <a href="tel:+4791670535" className="px-5 py-2.5 bg-amber-400 text-amber-950 hover:bg-amber-300 transition-colors uppercase tracking-widest text-xs font-bold">
               Ring oss
             </a>
           </div>
@@ -32,19 +32,22 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/40 to-stone-950/60" />
         <div className="relative max-w-7xl mx-auto px-6 pb-28 text-stone-50 w-full">
-          <p className="text-xs uppercase tracking-[0.5em] text-amber-400 mb-8 font-semibold">— Hadsel Bygg og Vedlikehold AS —</p>
+          <div className="inline-flex items-center gap-3 mb-8">
+            <span className="h-px w-12 bg-amber-400" />
+            <p className="text-[11px] uppercase tracking-[0.4em] text-amber-400 font-semibold">Stokmarknes · siden 2003</p>
+          </div>
           <h1 className="font-bold mb-8 max-w-4xl" style={{ fontSize: "clamp(2.75rem, 6.5vw, 5.5rem)", letterSpacing: "-0.02em", lineHeight: 1 }}>
             Vi bygger for<br />
             <span className="text-amber-400">framtiden.</span>
           </h1>
           <p className="text-lg md:text-xl text-stone-200 max-w-xl mb-10 leading-relaxed">
-            Entreprenør og snekker i Stokmarknes. Nybygg, rehabilitering, betong, fliser
-            og maling — for privat og næring i Nord-Nordland og Sør-Troms.
+            Entreprenør med 27 ansatte i Stokmarknes. Vi tar prosjekter fra Fauske
+            i sør til Harstad i nord — bygg, betong, snekring, fliser og maling.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="tel:+4791670535"
-              className="inline-block px-8 py-4 bg-amber-400 text-stone-900 hover:bg-amber-300 transition-colors uppercase tracking-[0.25em] text-xs font-bold"
+              className="inline-block px-8 py-4 bg-amber-400 text-amber-950 hover:bg-amber-300 transition-colors uppercase tracking-[0.25em] text-xs font-bold"
             >
               Ring 91 67 05 35
             </a>
@@ -58,42 +61,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Velkomst */}
-      <section className="py-28 px-6">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-6 font-semibold">— Om oss —</p>
-          <h2 className="font-bold mb-10 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-            Solid håndverk, levert på tid.
-          </h2>
-          <div className="grid md:grid-cols-2 gap-10 text-lg text-stone-700 leading-relaxed">
-            <p>
-              Hadsel Bygg og Vedlikehold er en lokal entreprenør basert på Stokmarknes
-              med rundt 30 ansatte. Vi leverer komplette løsninger innen bygg,
-              rehabilitering og vedlikehold — for både private og næringskunder.
-            </p>
-            <p>
-              Tømrerarbeid, betong, betongsaging og kjerneboring, flislegging og maling.
-              Vårt arbeidsområde er naturlig Nord-Nordland og Sør-Troms. Vi er
-              Miljøfyrtårn-sertifisert og godkjent lærlingbedrift.
-            </p>
+      {/* Industrial stripe band */}
+      <div
+        className="h-3 w-full"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(135deg, #0c0a09 0 14px, #fbbf24 14px 28px)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Om oss */}
+      <section className="py-28 px-6 bg-stone-50">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-7">
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-6 font-semibold">— Om oss —</p>
+            <h2 className="font-bold mb-8 leading-[1.02]" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", letterSpacing: "-0.025em" }}>
+              22 år, 27 fagfolk og prosjekter langs hele Saltfjellet til Tromsgrensa.
+            </h2>
+            <div className="space-y-5 text-lg text-stone-700 leading-relaxed">
+              <p>
+                Hadsel Bygg og Vedlikehold ble etablert i 2003. I dag teller vi 27 ansatte
+                med base i Måkeveien på Stokmarknes — tømrere, betongarbeidere, flisleggere
+                og ingeniører.
+              </p>
+              <p>
+                Vi tar oppdrag fra Fauske i sør til Harstad og Narvik i nord. Privatkunder
+                som skal bygge på, næringsbygg som skal rehabiliteres, og betong- og
+                flislegging der det krever fagbrev og presisjon.
+              </p>
+            </div>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-            <div className="border-l-2 border-amber-400 pl-5">
-              <p className="text-3xl font-bold text-stone-900">~30 ansatte</p>
-              <p className="text-sm text-stone-600 mt-1">Bredt fagmiljø under samme tak</p>
-            </div>
-            <div className="border-l-2 border-amber-400 pl-5">
-              <p className="text-3xl font-bold text-stone-900">Miljøfyrtårn</p>
-              <p className="text-sm text-stone-600 mt-1">Sertifisert for bærekraftig drift</p>
-            </div>
-            <div className="border-l-2 border-amber-400 pl-5">
-              <p className="text-3xl font-bold text-stone-900">Lærling­bedrift</p>
-              <p className="text-sm text-stone-600 mt-1">Godkjent læreplass for fagbrev</p>
-            </div>
-            <div className="border-l-2 border-amber-400 pl-5">
-              <p className="text-3xl font-bold text-stone-900">EHF-faktura</p>
-              <p className="text-sm text-stone-600 mt-1">Standard for næringskunder</p>
-            </div>
+
+          <div className="md:col-span-5">
+            <dl className="divide-y divide-stone-300/70 border-y border-stone-300/70">
+              {[
+                ["Etablert", "2003"],
+                ["Ansatte", "27 fagfolk"],
+                ["Arbeidsområde", "Fauske → Harstad"],
+                ["Hovedkontor", "Måkeveien 2, Stokmarknes"],
+              ].map(([k, v]) => (
+                <div key={k} className="flex items-baseline justify-between py-4">
+                  <dt className="text-xs uppercase tracking-widest text-stone-500 font-semibold">{k}</dt>
+                  <dd className="text-base md:text-lg text-stone-900 font-medium text-right">{v}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </section>
@@ -150,6 +163,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Slik jobber vi */}
+      <section className="py-24 px-6 bg-stone-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Fra første samtale til ferdig bygg —</p>
+            <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
+              Slik jobber vi.
+            </h2>
+          </div>
+
+          <ol className="grid md:grid-cols-4 gap-px bg-stone-300/60 border border-stone-300/60">
+            {[
+              { n: "01", title: "Befaring", desc: "Vi tar oss tid til å se prosjektet og forstå hva du faktisk trenger. Gratis, uforpliktende." },
+              { n: "02", title: "Tilbud", desc: "Du får et tydelig tilbud med pris, leveringstid og ansvarsfordeling — ingen overraskelser." },
+              { n: "03", title: "Bygging", desc: "Vi bemanner med riktig fag — tømrere, betongarbeidere, flisleggere — og holder framdriften." },
+              { n: "04", title: "Overlevering", desc: "Sluttbefaring og dokumentasjon. Vi følger opp etter overtakelse også." },
+            ].map((step) => (
+              <li key={step.n} className="bg-white p-7 relative">
+                <span className="block text-5xl font-bold text-amber-400 mb-3 tracking-tight" style={{ letterSpacing: "-0.04em" }}>{step.n}</span>
+                <h3 className="text-lg font-bold text-stone-900 mb-2">{step.title}</h3>
+                <p className="text-sm text-stone-600 leading-relaxed">{step.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       {/* Godkjenninger */}
       <section id="godkjenninger" className="py-24 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -194,34 +234,71 @@ export default function Home() {
       </section>
 
       {/* Team */}
-      <section id="team" className="py-28 px-6">
+      <section id="team" className="py-28 px-6 bg-stone-50">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-16 max-w-2xl">
+          <div className="mb-14 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Kontaktpersoner —</p>
             <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-              Snakk direkte med riktig person.
+              Folk du kan ringe direkte.
             </h2>
-            <p className="text-lg text-stone-600 mt-4">Vi er rundt 30 ansatte — her er folka du tar kontakt med.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { name: "Finn Hokland", role: "Daglig leder", phone: "97 70 24 26", tel: "+4797702426" },
-              { name: "Elisabeth Hokland", role: "Regnskap", phone: "47 88 98 64", tel: "+4747889864" },
-              { name: "Bjørn Rask", role: "Prosjektleder", phone: "97 54 29 40", tel: "+4797542940" },
-              { name: "Christoffer Lockert", role: "Ingeniør", phone: "47 36 76 64", tel: "+4747367664" },
-            ].map((p) => (
-              <div key={p.name} className="bg-white border border-stone-200 rounded-lg p-6 hover:border-amber-400 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-stone-900 text-amber-400 flex items-center justify-center font-bold mb-4">
-                  {p.name.split(" ").map((s) => s[0]).join("").slice(0, 2)}
-                </div>
-                <p className="font-bold text-stone-900">{p.name}</p>
-                <p className="text-xs uppercase tracking-widest text-stone-500 mt-1 mb-4">{p.role}</p>
-                <a href={`tel:${p.tel}`} className="text-sm text-stone-700 hover:text-amber-700 transition-colors">
-                  {p.phone}
+          <div className="grid md:grid-cols-12 gap-5">
+            {/* Featured: Finn */}
+            <article className="md:col-span-6 bg-stone-900 text-stone-50 rounded-lg p-8 md:p-10 flex flex-col justify-between relative overflow-hidden">
+              <div
+                className="absolute top-0 left-0 right-0 h-1.5"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(135deg, #0c0a09 0 10px, #fbbf24 10px 20px)",
+                }}
+                aria-hidden="true"
+              />
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.4em] text-amber-400 mb-5 font-semibold">Daglig leder</p>
+                <h3 className="font-bold mb-3" style={{ fontSize: "clamp(2rem, 3vw, 2.5rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}>
+                  Finn Harald Hokland
+                </h3>
+                <p className="text-stone-300 leading-relaxed mb-8 max-w-md">
+                  Har drevet Hadsel Bygg siden 2003. Ring direkte hvis du har et større
+                  prosjekt eller vil ha en uforpliktende prat om hva som er mulig.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 items-center">
+                <a href="tel:+4797702426" className="inline-flex items-center gap-2 px-5 py-3 bg-amber-400 text-amber-950 hover:bg-amber-300 transition-colors font-bold text-sm">
+                  Ring 97 70 24 26
+                </a>
+                <a href="mailto:finn@hbv.as" className="text-sm text-stone-300 hover:text-amber-400 transition-colors underline underline-offset-4">
+                  finn@hbv.as
                 </a>
               </div>
-            ))}
+            </article>
+
+            {/* Sidebar: 3 others stacked */}
+            <div className="md:col-span-6 grid gap-4">
+              {[
+                { name: "Elisabeth Hokland", role: "Regnskap", phone: "47 88 98 64", tel: "+4747889864" },
+                { name: "Bjørn Rask", role: "Prosjektleder", phone: "97 54 29 40", tel: "+4797542940" },
+                { name: "Christoffer Lockert", role: "Ingeniør", phone: "47 36 76 64", tel: "+4747367664" },
+              ].map((p) => (
+                <a
+                  key={p.name}
+                  href={`tel:${p.tel}`}
+                  className="group flex items-center gap-5 bg-white border border-stone-200 rounded-lg p-5 hover:border-stone-900 hover:shadow-sm transition-all"
+                >
+                  <div className="w-14 h-14 rounded-full bg-stone-100 text-amber-950 flex items-center justify-center font-bold text-sm flex-shrink-0 group-hover:bg-amber-400 transition-colors">
+                    {p.name.split(" ").map((s) => s[0]).join("").slice(0, 2)}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="font-bold text-stone-900">{p.name}</p>
+                    <p className="text-xs uppercase tracking-widest text-stone-500 mt-0.5">{p.role}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-mono text-sm text-stone-700 group-hover:text-amber-700 transition-colors whitespace-nowrap">{p.phone}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -282,21 +359,43 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-stone-900 text-stone-50 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="font-bold mb-6" style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}>
-            Har du et prosjekt på gang?
-          </h2>
-          <p className="text-lg text-stone-300 mb-10 leading-relaxed">
-            Ring Finn på 91 67 05 35 for å diskutere prosjektet, eller send en e-post.
-            Vi gir alltid et tydelig svar på hva som er mulig.
-          </p>
-          <a
-            href="tel:+4791670535"
-            className="inline-block px-10 py-4 bg-amber-400 text-stone-900 hover:bg-amber-300 transition-colors uppercase tracking-[0.25em] text-xs font-bold"
-          >
-            Ring 91 67 05 35
-          </a>
+      <section className="relative py-24 px-6 bg-stone-900 text-stone-50 overflow-hidden">
+        <div
+          className="absolute top-0 left-0 right-0 h-3"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(135deg, #0c0a09 0 14px, #fbbf24 14px 28px)",
+          }}
+          aria-hidden="true"
+        />
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400 mb-4 font-semibold">— Befaring —</p>
+            <h2 className="font-bold mb-6" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)", letterSpacing: "-0.025em", lineHeight: 1.05 }}>
+              Skal du bygge,<br />
+              eller pusse opp?
+            </h2>
+            <p className="text-lg text-stone-300 leading-relaxed">
+              Ring oss for en uforpliktende befaring. Vi kommer ut, ser på prosjektet, og
+              gir et ærlig svar på hva som er mulig — uten å selge inn det du ikke trenger.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3">
+            <a
+              href="tel:+4791670535"
+              className="inline-flex items-center justify-between px-7 py-5 bg-amber-400 text-amber-950 hover:bg-amber-300 transition-colors font-bold"
+            >
+              <span className="text-xs uppercase tracking-[0.25em]">Ring hovednummer</span>
+              <span className="text-xl">91 67 05 35</span>
+            </a>
+            <a
+              href="mailto:finn@hbv.as"
+              className="inline-flex items-center justify-between px-7 py-5 border border-stone-50/20 hover:border-amber-400 transition-colors font-semibold"
+            >
+              <span className="text-xs uppercase tracking-[0.25em] text-stone-400">Send e-post</span>
+              <span className="text-base">finn@hbv.as</span>
+            </a>
+          </div>
         </div>
       </section>
 
