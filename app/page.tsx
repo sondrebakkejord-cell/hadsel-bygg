@@ -112,54 +112,122 @@ export default function Home() {
       </section>
 
       {/* Tjenester */}
-      <section id="tjenester" className="py-24 px-6 bg-stone-900 text-stone-50">
+      <section id="tjenester" className="relative py-24 px-6 bg-stone-900 text-stone-50 overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-14 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-400 mb-4 font-semibold">— Vi utfører arbeid innen —</p>
-            <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-              Tjenester.
-            </h2>
+          <div className="mb-20 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <div className="max-w-2xl">
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-400 mb-4 font-semibold">— Vi utfører arbeid innen —</p>
+              <h2 className="font-bold leading-[1]" style={{ fontSize: "clamp(2.25rem, 4.5vw, 3.5rem)", letterSpacing: "-0.025em" }}>
+                Fire fag.<br />Ett ansvar.
+              </h2>
+            </div>
+            <p className="text-sm text-stone-400 max-w-xs md:text-right">
+              Vi tar prosjektene fra første tegning til ferdig overlevering — med fagbrev
+              i hver disiplin.
+            </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="space-y-24">
             {[
-              { title: "Alt innen betong", desc: "Plate på mark, vegger og spesialarbeid i betong.", img: "https://hbv.as/resources/acc7fe47b7c5a21d7c244415325eb9.jpg" },
-              { title: "Tømrerarbeid", desc: "Klassisk snekring — fra konstruksjon til innvendig listverk.", img: "https://hbv.as/resources/5ee3b8905a1f8e0ebb140b0a06b2f5.jpg" },
-              { title: "Betongsaging & kjerneboring", desc: "Presisjonsarbeid i eksisterende konstruksjoner.", img: "https://hbv.as/resources/dd84bace99512112d4803412d3dd48.jpg" },
-              { title: "Flislegging", desc: "Bad, gulv og vegg — i moderne og klassisk design.", img: "https://hbv.as/resources/870452e883f11c378317e951148b4a.jpg" },
-            ].map((s) => (
-              <article key={s.title} className="group relative overflow-hidden rounded-lg bg-stone-800 aspect-[4/3]">
-                <img
-                  src={s.img}
-                  alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
-                <div className="relative h-full flex flex-col justify-end p-7">
-                  <h3 className="text-2xl md:text-3xl font-bold text-amber-400 mb-2 tracking-tight">{s.title}</h3>
-                  <p className="text-sm md:text-base text-stone-200 max-w-md leading-relaxed">{s.desc}</p>
+              {
+                num: "01",
+                title: "Alt innen betong",
+                lede: "Plate på mark, vegger, spesialformer. Vi støper det som skal stå i 50 år.",
+                bullets: [
+                  "Plate på mark og fundamentering",
+                  "Betongvegger og spesialformer",
+                  "Brønner, kummer og vannledning",
+                  "Reparasjon og forsterkning",
+                ],
+                img: "https://hbv.as/resources/acc7fe47b7c5a21d7c244415325eb9.jpg",
+              },
+              {
+                num: "02",
+                title: "Tømrerarbeid",
+                lede: "Tømrere med fagbrev. Vi setter takstoler, kler vegger, og lager listverk som møter veggen rett.",
+                bullets: [
+                  "Takstoler og bærende konstruksjon",
+                  "Utvendig kledning og innfesting",
+                  "Innvendige vegger og himling",
+                  "Terrasser, trapp og listverk",
+                ],
+                img: "https://hbv.as/resources/5ee3b8905a1f8e0ebb140b0a06b2f5.jpg",
+              },
+              {
+                num: "03",
+                title: "Betongsaging & kjerneboring",
+                lede: "Når noe må gjennom en eksisterende betongkonstruksjon. Vi sager rent og borer presist.",
+                bullets: [
+                  "Saging i vegg, gulv og tak",
+                  "Kjerneboring fra Ø10 til Ø600 mm",
+                  "Riving av betongelementer",
+                  "Vakuum­støvsuging — minimum søl",
+                ],
+                img: "https://hbv.as/resources/dd84bace99512112d4803412d3dd48.jpg",
+              },
+              {
+                num: "04",
+                title: "Flislegging",
+                lede: "Bad, gulv og vegg. Vi legger fliser som ligger plant og fuger som ikke sprekker.",
+                bullets: [
+                  "Bad og våtrom etter forskrift",
+                  "Gulvflis i kjøkken og oppholdsrom",
+                  "Mosaikk og storformat",
+                  "Membran og varmekabler",
+                ],
+                img: "https://hbv.as/resources/870452e883f11c378317e951148b4a.jpg",
+              },
+            ].map((s, i) => (
+              <article
+                key={s.num}
+                className={`grid md:grid-cols-12 gap-8 md:gap-12 items-center ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}
+              >
+                <div className="md:col-span-7 relative overflow-hidden rounded-lg bg-stone-800 aspect-[4/3]">
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-4 left-4 inline-flex items-center gap-2 px-3 py-1 bg-stone-950/80 backdrop-blur-sm text-amber-400 text-[10px] uppercase tracking-[0.3em] font-bold font-mono">
+                    S/{s.num}
+                  </span>
+                </div>
+                <div className="md:col-span-5">
+                  <p className="text-xs font-mono text-amber-400 mb-3 tracking-widest">S/{s.num}</p>
+                  <h3 className="font-bold mb-4" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2.25rem)", letterSpacing: "-0.02em", lineHeight: 1.05 }}>
+                    {s.title}
+                  </h3>
+                  <p className="text-stone-300 leading-relaxed mb-6">{s.lede}</p>
+                  <ul className="space-y-2 border-t border-stone-700 pt-5">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex items-baseline gap-3 text-sm text-stone-300">
+                        <span className="text-amber-400 font-mono text-xs">▸</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="mt-10 grid sm:grid-cols-3 gap-4">
-            {[
-              { title: "Rehabilitering", desc: "Oppussing og modernisering av eksisterende bygg." },
-              { title: "Tak & fasade", desc: "Tekking, kledning, etterisolering og oppgradering." },
-              { title: "Maling", desc: "Innvendig og utvendig overflatebehandling." },
-            ].map((s) => (
-              <div key={s.title} className="bg-stone-800/60 border border-stone-700 rounded-lg p-6">
-                <h3 className="text-base font-bold text-amber-400 mb-2">{s.title}</h3>
-                <p className="text-sm text-stone-300 leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
+          {/* Spec-list: secondary services */}
+          <div className="mt-24 pt-10 border-t border-stone-700">
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400 mb-6 font-semibold font-mono">— Vi gjør også —</p>
+            <dl className="divide-y divide-stone-800 border-y border-stone-800">
+              {[
+                ["Rehabilitering", "Oppussing og modernisering av eksisterende bygg"],
+                ["Tak & fasade", "Tekking, kledning, etterisolering og oppgradering"],
+                ["Maling", "Innvendig og utvendig overflatebehandling"],
+              ].map(([k, v]) => (
+                <div key={k} className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-6 py-5">
+                  <dt className="sm:w-48 text-base font-bold text-amber-400">{k}</dt>
+                  <dd className="text-sm text-stone-300 leading-relaxed">{v}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
-
-          <p className="text-center mt-14 text-sm text-stone-400 italic max-w-xl mx-auto">
-            Vi tar gjerne en titt på prosjektet ditt — ring oss for en uforpliktende prat.
-          </p>
         </div>
       </section>
 
