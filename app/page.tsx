@@ -233,7 +233,62 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Kontakt */}
+      <section id="kontakt" className="py-28 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-14">
+            <div>
+              <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Kontakt —</p>
+              <h2 className="font-bold mb-6 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
+                Be om en uforpliktende prat.
+              </h2>
+              <p className="text-lg text-stone-700 mb-10 leading-relaxed">
+                Ring oss for en uforpliktende vurdering av prosjektet ditt. Vi tar gjerne
+                en befaring så vi vet hva som trengs før vi gir tilbud.
+              </p>
+
+              <div className="space-y-5">
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">Hovednummer</p>
+                  <a href="tel:+4791670535" className="block text-2xl font-bold text-stone-900 hover:text-amber-700 transition-colors">
+                    91 67 05 35
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">E-post</p>
+                  <a href="mailto:finn@hbv.as" className="block text-lg text-stone-900 hover:text-amber-700 transition-colors">
+                    finn@hbv.as
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">Adresse</p>
+                  <p className="text-lg text-stone-900">Måkeveien 2, 8450 Stokmarknes</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">Åpningstider</p>
+                  <p className="text-stone-700">Man–tor 07:00–15:30</p>
+                  <p className="text-stone-700">Fre 07:00–14:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-lg border border-stone-300/60 shadow-sm h-full min-h-[480px]">
+              <iframe
+                title="Hadsel Bygg og Vedlikehold — Måkeveien 2, Stokmarknes"
+                src="https://maps.google.com/maps?q=M%C3%A5keveien%202%2C%208450%20Stokmarknes&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: "block", minHeight: "480px" }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Kontaktpersoner */}
       <section id="team" className="py-28 px-6 bg-stone-50">
         <div className="max-w-6xl mx-auto">
           <div className="mb-14 max-w-2xl">
@@ -298,61 +353,6 @@ export default function Home() {
                   </div>
                 </a>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Kontakt */}
-      <section id="kontakt" className="py-28 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-14">
-            <div>
-              <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Kontakt —</p>
-              <h2 className="font-bold mb-6 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-                Be om en uforpliktende prat.
-              </h2>
-              <p className="text-lg text-stone-700 mb-10 leading-relaxed">
-                Ring oss for en uforpliktende vurdering av prosjektet ditt. Vi tar gjerne
-                en befaring så vi vet hva som trengs før vi gir tilbud.
-              </p>
-
-              <div className="space-y-5">
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">Hovednummer</p>
-                  <a href="tel:+4791670535" className="block text-2xl font-bold text-stone-900 hover:text-amber-700 transition-colors">
-                    91 67 05 35
-                  </a>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">E-post</p>
-                  <a href="mailto:finn@hbv.as" className="block text-lg text-stone-900 hover:text-amber-700 transition-colors">
-                    finn@hbv.as
-                  </a>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">Adresse</p>
-                  <p className="text-lg text-stone-900">Måkeveien 2, 8450 Stokmarknes</p>
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-stone-500 mb-2 font-semibold">Åpningstider</p>
-                  <p className="text-stone-700">Man–tor 07:00–15:30</p>
-                  <p className="text-stone-700">Fre 07:00–14:00</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="overflow-hidden rounded-lg border border-stone-300/60 shadow-sm h-full min-h-[480px]">
-              <iframe
-                title="Hadsel Bygg og Vedlikehold — Måkeveien 2, Stokmarknes"
-                src="https://maps.google.com/maps?q=M%C3%A5keveien%202%2C%208450%20Stokmarknes&t=&z=15&ie=UTF8&iwloc=B&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0, display: "block", minHeight: "480px" }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
             </div>
           </div>
         </div>
