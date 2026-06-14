@@ -13,7 +13,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-10 text-sm text-stone-50">
             <a href="#tjenester" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Tjenester</a>
             <a href="#team" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Team</a>
-            <a href="#prosjekter" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Prosjekter</a>
+            <a href="#godkjenninger" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Sertifiseringer</a>
             <a href="#kontakt" className="hover:text-amber-300 transition-colors uppercase tracking-widest text-xs">Kontakt</a>
             <a href="tel:+4791670535" className="px-5 py-2.5 bg-amber-400 text-stone-900 hover:bg-amber-300 transition-colors uppercase tracking-widest text-xs font-bold">
               Ring oss
@@ -101,27 +101,44 @@ export default function Home() {
       {/* Tjenester */}
       <section id="tjenester" className="py-24 px-6 bg-stone-900 text-stone-50">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-16 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-400 mb-4 font-semibold">— Tjenester —</p>
+          <div className="mb-14 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-400 mb-4 font-semibold">— Vi utfører arbeid innen —</p>
             <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-              Alt en moderne entreprenør skal kunne.
+              Tjenester.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-stone-700">
+          <div className="grid sm:grid-cols-2 gap-4">
             {[
-              { title: "Nybygg & tilbygg", desc: "Fra grunnmur til ferdig overlevert hus eller næringsbygg." },
+              { title: "Alt innen betong", desc: "Plate på mark, vegger og spesialarbeid i betong.", img: "https://hbv.as/resources/05828d5d976f0bcc209a938295a9db.jpg" },
+              { title: "Tømrerarbeid", desc: "Klassisk snekring — fra konstruksjon til innvendig listverk.", img: "https://hbv.as/resources/0ebea12ae251be1ba8a428bc57ed56.jpg" },
+              { title: "Betongsaging & kjerneboring", desc: "Presisjonsarbeid i eksisterende konstruksjoner.", img: "https://hbv.as/resources/500806b1b3268856836532ae6313f4.jpg" },
+              { title: "Flislegging", desc: "Bad, gulv og vegg — i moderne og klassisk design.", img: "https://hbv.as/resources/66f4adf7b61bc27d6b1f641016f46e.jpg" },
+            ].map((s) => (
+              <article key={s.title} className="group relative overflow-hidden rounded-lg bg-stone-800 aspect-[4/3]">
+                <img
+                  src={s.img}
+                  alt={s.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/50 to-transparent" />
+                <div className="relative h-full flex flex-col justify-end p-7">
+                  <h3 className="text-2xl md:text-3xl font-bold text-amber-400 mb-2 tracking-tight">{s.title}</h3>
+                  <p className="text-sm md:text-base text-stone-200 max-w-md leading-relaxed">{s.desc}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid sm:grid-cols-3 gap-4">
+            {[
               { title: "Rehabilitering", desc: "Oppussing og modernisering av eksisterende bygg." },
-              { title: "Tak", desc: "Tekking, takomlegging og takvedlikehold." },
-              { title: "Fasade", desc: "Kledning, etterisolering og fasadeoppgradering." },
-              { title: "Snekker­arbeid", desc: "Klassisk tømrerarbeid — alt fra terrasse til innvendig listverk." },
-              { title: "Betongarbeid", desc: "Plate på mark, vegger og spesialarbeid i betong." },
-              { title: "Betongsaging & kjerneboring", desc: "Presisjonsarbeid i eksisterende konstruksjoner." },
-              { title: "Fliser", desc: "Bad, gulv og vegg — i moderne og klassisk design." },
+              { title: "Tak & fasade", desc: "Tekking, kledning, etterisolering og oppgradering." },
               { title: "Maling", desc: "Innvendig og utvendig overflatebehandling." },
             ].map((s) => (
-              <div key={s.title} className="bg-stone-900 p-7 hover:bg-stone-800 transition-colors">
-                <h3 className="text-lg font-bold mb-2 text-amber-400">{s.title}</h3>
+              <div key={s.title} className="bg-stone-800/60 border border-stone-700 rounded-lg p-6">
+                <h3 className="text-base font-bold text-amber-400 mb-2">{s.title}</h3>
                 <p className="text-sm text-stone-300 leading-relaxed">{s.desc}</p>
               </div>
             ))}
@@ -130,6 +147,49 @@ export default function Home() {
           <p className="text-center mt-14 text-sm text-stone-400 italic max-w-xl mx-auto">
             Vi tar gjerne en titt på prosjektet ditt — ring oss for en uforpliktende prat.
           </p>
+        </div>
+      </section>
+
+      {/* Godkjenninger */}
+      <section id="godkjenninger" className="py-24 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 text-center">
+            <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Sertifiseringer —</p>
+            <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
+              Vi er godkjent som.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center max-w-4xl mx-auto">
+            {[
+              { src: "https://hbv.as/resources/Miljfyrtarn-norsk-farger.png", alt: "Miljøfyrtårn — sertifisert for bærekraftig drift" },
+              { src: "https://hbv.as/resources/godkjent_ansvarsrett.png", alt: "Sentralt godkjent — godkjent ansvarsrett" },
+              { src: "https://hbv.as/resources/sellihca-supplier-logo-stamp.jpg", alt: "Sellihca Qualified — leverandørsertifisering" },
+              { src: "https://hbv.as/resources/neso%20logo.png", alt: "NESO — Nordnorske Entreprenørers Service-Organisasjon" },
+            ].map((logo) => (
+              <div key={logo.alt} className="flex items-center justify-center h-24 md:h-28 w-full">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 flex flex-col items-center text-center">
+            <img
+              src="https://hbv.as/resources/merket-bedrifter-med-laerling.png"
+              alt="Vi har lærling — godkjent lærebedrift"
+              className="w-28 md:w-32 mb-4"
+              loading="lazy"
+            />
+            <p className="text-sm text-stone-600 max-w-md">
+              Godkjent lærebedrift — vi tar imot lærlinger og bidrar til opplæring av neste
+              generasjon håndverkere.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -160,38 +220,6 @@ export default function Home() {
                 <a href={`tel:${p.tel}`} className="text-sm text-stone-700 hover:text-amber-700 transition-colors">
                   {p.phone}
                 </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Prosjekter / Galleri */}
-      <section id="prosjekter" className="py-24 px-6 bg-stone-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12 max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.4em] text-amber-700 mb-4 font-semibold">— Prosjekter —</p>
-            <h2 className="font-bold leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", letterSpacing: "-0.02em" }}>
-              Noe av det vi har bygget.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {[
-              { src: "https://hbv.as/resources/05828d5d976f0bcc209a938295a9db.jpg", alt: "Prosjekt fra Hadsel Bygg og Vedlikehold" },
-              { src: "https://hbv.as/resources/0ebea12ae251be1ba8a428bc57ed56.jpg", alt: "Bygg- og rehabiliteringsprosjekt" },
-              { src: "https://hbv.as/resources/ae147eaa46154b2c1ab5341b0e4ac3.jpg", alt: "Snekker- og betongarbeid" },
-              { src: "https://hbv.as/resources/500806b1b3268856836532ae6313f4.jpg", alt: "Prosjekt i Vesterålen" },
-              { src: "https://hbv.as/resources/7d307130ee78cce7714d78d141b6d5.jpg", alt: "Fasadearbeid og tak" },
-              { src: "https://hbv.as/resources/66f4adf7b61bc27d6b1f641016f46e.jpg", alt: "Levert prosjekt fra HBV" },
-            ].map((img, i) => (
-              <div key={i} className="aspect-[4/3] overflow-hidden bg-stone-200 group">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                />
               </div>
             ))}
           </div>
